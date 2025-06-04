@@ -19,7 +19,8 @@ const Footer = () => {
                     Let's build something intentional, aligned, and beautiful.
                 </p>
                 <h3>Reach Me at:</h3>
-                <a href="https://linkedin.com/in/alyssa" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/alyssa-allen01/" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <br></br>
                 <a href="https://www.instagram.com/alyssa.m.allen/" target="_blank" rel="noreferrer" aria-label="LinkedIn">Instagram</a>
 
                 <p>© {new Date().getFullYear()} All Rights Reserved</p>

@@ -15,7 +15,7 @@ const Navbar = () => {
                 <li><Link to="/about" className="hover:text-purple-600">About</Link></li>
                 <li><Link to="/projects" className="hover:text-purple-600">Projects</Link></li>
                 <a
-                    href="/Digital Media Resume - Alyssa Allen"
+                    href={`${process.env.PUBLIC_URL}/Alyssa Allen Resume.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-purple-600"

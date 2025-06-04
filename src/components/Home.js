@@ -28,14 +28,14 @@ export const projects = [
         id: 1,
         title: "Project One",
         description: "UX design and branding for a startup.",
-        img: "https://via.placeholder.com/300x150.png?text=Project+1",
+        img: "https://www.pinterest.com/pin/4644405860216337/",
         tags: ["UX", "Branding"],
     },
     {
         id: 2,
         title: "Project Two",
         description: "Responsive website built with React.",
-        img: "https://via.placeholder.com/300x150.png?text=Project+2",
+        img: "https://www.pinterest.com/pin/415879346860814458/",
         tags: ["Web Dev"],
     },
 ];
