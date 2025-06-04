@@ -93,6 +93,16 @@ code {
   font-family: 'Playfair Display', serif;
 }
 
+.footer-container h2,
+.footer-container h3 {
+  font-family: 'Lakki Reddy', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  /* adjust as needed */
+}
+
+
 
 /* Section Styling */
 main {
