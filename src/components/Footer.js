@@ -27,7 +27,7 @@ const Footer = () => {
             <p>Now booking freelance + collab projects!<br />
                 Let's build something intentional, aligned, and beautiful.
             </p>
-            <h3>Reach Me at:</h3>
+            <h4>Reach Me at:</h4>
             <a href="https://www.linkedin.com/in/alyssa-allen01/" target="_blank" rel="noreferrer">LinkedIn</a><br />
             <a href="https://www.instagram.com/alyssa.m.allen/" target="_blank" rel="noreferrer">Instagram</a>
             <p style={{ marginTop: '1rem' }}>© {new Date().getFullYear()} All Rights Reserved</p>

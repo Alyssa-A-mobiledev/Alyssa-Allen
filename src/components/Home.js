@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import myImage from '../img/my-image.jpg'; // Make sure this path is correct
 
 const Home = () => {
     return (
@@ -12,33 +11,22 @@ const Home = () => {
                 transition={{ duration: 1 }}
             >
                 <div className="home-header">
-                    <h1>Hello</h1>
-                    <p>Welcome to Alyssa's Portfolio 🎨</p>
-                </div>
-                <div className="home-image">
-                    <img src={myImage} alt="Alyssa" />
+                    <h1>Design Portfolio</h1>
+                    <p>Graphic Design | UX/UI | Marketing </p>
                 </div>
             </motion.div>
+
+            <div className="scrolling-bar">
+                <p className="scrolling-text">
+                    WELCOME TO MY PORTFOLIO ✦ HI I'M ALYSSA ALLEN  ✦ COME EXPLORE MY PORTFOLIO ✦ &nbsp;&nbsp;
+                    WELCOME TO MY PORTFOLIO ✦ HI I'M ALYSSA ALLEN  ✦ COME EXPLORE MY PORTFOLIO ✦
+                    &nbsp;&nbsp;
+                    WELCOME TO MY PORTFOLIO ✦ HI I'M ALYSSA ALLEN  ✦ COME EXPLORE MY PORTFOLIO ✦
+                </p>
+            </div>
         </section>
     );
 };
-
-export const projects = [
-    {
-        id: 1,
-        title: "Project One",
-        description: "UX design and branding for a startup.",
-        img: "https://www.pinterest.com/pin/4644405860216337/",
-        tags: ["UX", "Branding"],
-    },
-    {
-        id: 2,
-        title: "Project Two",
-        description: "Responsive website built with React.",
-        img: "https://www.pinterest.com/pin/415879346860814458/",
-        tags: ["Web Dev"],
-    },
-];
 
 export default Home;
 
