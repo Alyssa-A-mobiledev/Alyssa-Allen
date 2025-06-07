@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import AlbumC from './projects/AlbumC';
 
 function App() {
   return (
@@ -14,6 +14,8 @@ function App() {
       <Navbar />
       <main>
         <Routes>
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/album-covers" element={<AlbumC />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
