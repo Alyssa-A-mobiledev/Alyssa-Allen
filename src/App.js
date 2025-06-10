@@ -6,7 +6,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import AlbumC from './projects/AlbumC';
+import DrawingGallery from './components/DrawingGallery';
+import Brand from './components/Brand';
 
 function App() {
   return (
@@ -14,12 +15,12 @@ function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/album-covers" element={<AlbumC />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/drawing-gallery" element={<DrawingGallery />} />
+          <Route path="/brand" element={<Brand />} />  {/* Updated route */}
         </Routes>
       </main>
       <Footer />

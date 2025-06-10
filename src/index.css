@@ -110,7 +110,6 @@ p {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 2rem;
-  /* adjust as needed */
 }
 
 /* Home Container */
@@ -138,6 +137,13 @@ p {
   color: #666;
   margin-top: -30px;
   padding-bottom: 90px;
+}
+
+h2 {
+
+  font-family: 'Lakki Reddy', cursive;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 
 /* Scrolling Text Bar */
@@ -267,7 +273,7 @@ p {
 }
 
 .not-designing {
-  color: #A18EED
+  color: #0034a4
 }
 
 /* Projects */
@@ -479,4 +485,189 @@ p {
 
 .email-icon-link {
   display: inline-block;
+}
+
+.drawing-gallery {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.brand-project-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* Side-by-side layout for image + description */
+.top-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.all-flavors-container img {
+  width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.brand-description {
+  flex: 1;
+}
+
+.brand-description h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.brand-description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.brand-description h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #777;
+}
+
+.brand-description p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* SCROLLING LOGOS */
+.scrolling-logos {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.logos-track {
+  display: inline-flex;
+  animation: scroll 20s linear infinite;
+}
+
+.logos-track img {
+  height: 100px;
+  margin-right: 2rem;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pair Images */
+.flavor-pairs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.flavor-pairs img {
+  width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Single Flavors in a row */
+.single-flavors {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.single-flavors img {
+  width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.user-persona-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.user-persona-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.user-persona-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.user-personas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.user-personas-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.user-personas-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Overlay Styling */
+.full-image-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.full-image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
 }

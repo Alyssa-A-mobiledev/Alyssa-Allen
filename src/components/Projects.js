@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import galleryImg from '../img/gallery.png';
 import cmsImg from '../img/cms.png';
 import todoImg from '../img/ToDo.png';
-import project3 from '../img/project3.jpg';
-
+import drawing6 from '../img/drawings/drawing6.jpg';
+import brandImg from '../img/drink/all.jpg';
 
 const projects = [
     {
@@ -11,7 +13,8 @@ const projects = [
         description: 'An interactive photo gallery.',
         image: galleryImg,
         link: 'https://students.gaim.ucf.edu/~al488279/dig3716c/labs/lab11/gallery.html',
-        category: 'Graphic Design',
+        category: 'Coding',
+        internal: false,
     },
     {
         title: 'TO DO App',
@@ -19,21 +22,32 @@ const projects = [
         image: todoImg,
         link: 'https://students.gaim.ucf.edu/~al488279/dig3134c/assignment03/todo.php',
         category: 'Coding',
+        internal: false,
     },
     {
         title: 'CMS Project',
-        description: 'A simple CMS backend for a fictional movie review site. Login and Password for Review page is review, Login for administrator is admin.',
+        description: 'A simple CMS backend for a fictional movie review site. Login Information: Administratior view: admin = login & password Reviewer: review = login & password.',
         image: cmsImg,
         link: 'https://students.gaim.ucf.edu/~al488279/dig3134c/assignment04/admin.php',
-        category: 'UX/UI',
+        category: 'Coding',
+        internal: false,
     },
     {
-        title: 'Spotify Album Covers',
-        description: 'A dynamic visual showcase of Spotify playlist covers using animation and design.',
-        image: project3,
-        link: '/album-covers', // React route
-        category: 'Graphic Design',
+        title: 'Drawing 1 Gallery',
+        description: 'A curated showcase of selected works from my Fundamentals of Drawing 1 class.',
+        image: drawing6,
+        link: '/drawing-gallery',
+        category: 'Other',
+        internal: true,
     },
+    {
+        title: 'Drink Branding',
+        description: 'Branding and packaging design for a refreshing drink line with three flavors.',
+        image: brandImg,
+        link: '/brand', // updated link to /brand
+        category: 'Graphic Design',
+        internal: true,
+    }
 ];
 
 const Projects = () => {
@@ -66,13 +80,14 @@ const Projects = () => {
                         <img src={project.image} alt={project.title} />
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
-                        <a
-                            href={project.link}
-                            target={project.link.startsWith('/') ? '_self' : '_blank'}
-                            rel="noreferrer"
-                        >
-                            View Project
-                        </a>
+
+                        {project.internal ? (
+                            <Link to={project.link}>View Project</Link>
+                        ) : (
+                            <a href={project.link} target="_blank" rel="noreferrer">
+                                View Project
+                            </a>
+                        )}
                     </div>
                 ))}
             </div>
