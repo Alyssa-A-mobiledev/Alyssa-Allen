@@ -349,6 +349,17 @@ h2 {
   background-color: #095256;
 }
 
+/* If only one project shows after filter */
+.projects-grid.single .project-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.projects-grid.single {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
 
 /* Contact */
 .contact-page {
@@ -516,29 +527,54 @@ h2 {
   transform: scale(1.05);
 }
 
+/*Brand Css*/
+/* BRAND PROJECT CSS */
+
+/* Base container for the whole page */
 .brand-project-container {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: sans-serif;
+  font-family: 'Inria Serif', serif;
+  color: #222;
 }
 
-/* Side-by-side layout for image + description */
-.top-section {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+/* Header section for the project */
+.brand-header {
+  text-align: center;
   margin-bottom: 2rem;
 }
 
+.brand-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Top section with all flavors image and description side by side */
+.top-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.all-flavors-container {
+  flex: 1;
+  min-width: 300px;
+}
+
 .all-flavors-container img {
-  width: 300px;
-  border-radius: 8px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .brand-description {
   flex: 1;
+  min-width: 300px;
 }
 
 .brand-description h2 {
@@ -547,45 +583,43 @@ h2 {
 }
 
 .brand-description h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #555;
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 0.5rem;
 }
 
 .brand-description h4 {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  color: #777;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.75rem;
 }
 
 .brand-description p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
+  color: #333;
 }
 
-/* SCROLLING LOGOS */
+/* Scrolling logos (Label designs) */
 .scrolling-logos {
   overflow: hidden;
-  white-space: nowrap;
+  width: 100%;
   margin: 2rem 0;
-  position: relative;
 }
 
 .logos-track {
-  display: inline-flex;
+  display: flex;
   animation: scroll 20s linear infinite;
+  gap: 2rem;
 }
 
 .logos-track img {
-  height: 100px;
-  margin-right: 2rem;
+  height: 120px;
   object-fit: contain;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 
   100% {
@@ -593,32 +627,57 @@ h2 {
   }
 }
 
-/* Pair Images */
+.scrolling-logos h4 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #292929;
+}
+
+.scrolling-logos p {
+  max-width: 800px;
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+/* Flavor Pairs */
 .flavor-pairs {
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
 .flavor-pairs img {
-  width: 300px;
-  border-radius: 8px;
-  object-fit: cover;
+  max-width: 48%;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Single Flavors in a row */
+@media (max-width: 768px) {
+  .flavor-pairs img {
+    max-width: 100%;
+  }
+}
+
+/* Single Flavors at the bottom */
 .single-flavors {
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .single-flavors img {
-  width: 200px;
-  border-radius: 8px;
-  object-fit: cover;
+  max-width: 32%;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .single-flavors img {
+    max-width: 100%;
+  }
 }
 
 .user-persona-section {
@@ -670,4 +729,269 @@ h2 {
   max-width: 90%;
   max-height: 90%;
   border-radius: 8px;
+}
+
+/* AR CSS */
+.ar-project-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inria Serif', serif;
+  color: #222;
+}
+
+.ar-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ar-header h1 {
+  text-type: bold;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ar-section {
+  margin-bottom: 3rem;
+}
+
+.ar-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3a3a3a;
+}
+
+.ar-process-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ar-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.ar-image-carousel {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ar-carousel-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  /* adjust for your project - can use 16/9 or remove if not needed */
+  background-color: #f8f8f8;
+  /* subtle background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.ar-carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* ensures full image fits inside container */
+}
+
+.ar-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ar-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.ar-thumbnail:hover,
+.ar-thumbnail.active {
+  opacity: 1;
+  outline: 2px solid #333;
+}
+
+.ar-video {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ar-paper-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #292929;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ar-paper-link:hover {
+  background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .ar-process-container {
+    flex-direction: column;
+  }
+}
+
+.ar-wireframes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  /* adjust padding as needed */
+}
+
+.ar-wireframes-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  /* adjust for emphasis */
+}
+
+.ar-wireframes-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.paper-and-reviews {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.paper-link {
+  flex: 1 1 250px;
+}
+
+.ar-reviews {
+  flex: 2 1 400px;
+}
+
+/* Mood Css */
+.mood-project-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inria Serif', serif;
+  color: #222;
+}
+
+.mood-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mood-section {
+  margin-bottom: 3rem;
+}
+
+.mood-process-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.mood-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mood-image-carousel {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mood-carousel-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.mood-carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.mood-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mood-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.mood-thumbnail:hover,
+.mood-thumbnail.active {
+  opacity: 1;
+  outline: 2px solid #333;
+}
+
+.mood-wireframes-section,
+.mood-mockup,
+.mood-all-screens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.mood-wireframes-section img,
+.mood-mockup img,
+.mood-all-screens img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .mood-process-container {
+    flex-direction: column;
+  }
 }

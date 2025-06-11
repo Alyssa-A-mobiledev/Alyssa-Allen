@@ -6,6 +6,8 @@ import cmsImg from '../img/cms.png';
 import todoImg from '../img/ToDo.png';
 import drawing6 from '../img/drawings/drawing6.jpg';
 import brandImg from '../img/drink/all.jpg';
+import wireframe1 from '../img/AR/Wireframe.jpg';
+import Mockup from '../img/Mood/Mockup1.jpg';
 
 const projects = [
     {
@@ -18,7 +20,7 @@ const projects = [
     },
     {
         title: 'TO DO App',
-        description: 'A personal To Do App',
+        description: 'A personal To Do App using SQL',
         image: todoImg,
         link: 'https://students.gaim.ucf.edu/~al488279/dig3134c/assignment03/todo.php',
         category: 'Coding',
@@ -47,6 +49,22 @@ const projects = [
         link: '/brand', // updated link to /brand
         category: 'Graphic Design',
         internal: true,
+    },
+    {
+        title: 'AR UX/UI Project',
+        description: 'An Augmented Reality concept project showcasing wireframes, prototypes, a demo, and a research paper',
+        image: wireframe1,
+        link: '/APV',
+        category: 'UX/UI',
+        internal: true,
+    },
+    {
+        title: 'Mood Tracker',
+        description: 'A thoughtfully designed UX/UI project that helps users easily track and reflect on their daily emotions through an intuitive, visually engaging interface. By promoting mindfulness and emotional awareness, this app supports users in understanding their mood patterns and fostering overall well-being',
+        image: Mockup,
+        link: '/Mood',
+        category: 'UX/UI',
+        internal: true,
     }
 ];
 
@@ -74,7 +92,7 @@ const Projects = () => {
                 ))}
             </div>
 
-            <div className="projects-grid">
+            <div className={`projects-grid ${filteredProjects.length === 1 ? 'single' : ''}`}>
                 {filteredProjects.map((project, index) => (
                     <div className="project-card" key={index}>
                         <img src={project.image} alt={project.title} />
@@ -91,6 +109,7 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
+
         </section>
     );
 };

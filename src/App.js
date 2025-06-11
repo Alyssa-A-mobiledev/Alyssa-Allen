@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import DrawingGallery from './components/DrawingGallery';
 import Brand from './components/Brand';
+import APV from './components/APV';
+import Mood from './components/Mood';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/drawing-gallery" element={<DrawingGallery />} />
-          <Route path="/brand" element={<Brand />} />  {/* Updated route */}
+          <Route path="/brand" element={<Brand />} />
+          <Route path="/APV" element={<APV />} />
+          <Route path="/Mood" element={<Mood />} />
         </Routes>
       </main>
       <Footer />

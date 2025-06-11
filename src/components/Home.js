@@ -38,7 +38,7 @@ const Home = () => {
     const inView = useInView(stackRef, { margin: '-100px' });
     const images = [project1, project2, project3, project4];
 
-    // ✅ State for full-size image overlay
+    // State for full-size image overlay
     const [fullImage, setFullImage] = useState(null);
 
     const handleImageClick = (img) => {
@@ -96,10 +96,10 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* ✅ User Personas Section */}
+            {/*  User Personas Section */}
             <section className="user-persona-section">
                 <h2>User Personas & Persona Building</h2>
-                <p>In my UX process, I focus on building thoughtful, research-driven personas to guide design decisions. Below are examples of personas developed for UX projects, along with visual explorations of persona building.</p>
+                <p>In my process, I focus on building thoughtful, research-driven personas to guide design decisions. Below are examples of personas developed for UX projects, along with visual explorations of persona building.</p>
                 <div className="user-personas-grid">
                     {[UserP1, UserP2, PBuilding1, PBuilding2].map((img, index) => (
                         <img
