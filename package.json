@@ -2,7 +2,7 @@
   "name": "design-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://alyssa-a-mobiledev.github.io/Design-Portfolio/",
+"homepage": "https://Alyssa-A-mobiledev.github.io/Design-Portfolio",
   "dependencies": {
     "framer-motion": "^12.16.0",
     "motion": "^12.16.0",
