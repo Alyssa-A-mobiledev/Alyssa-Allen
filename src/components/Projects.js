@@ -8,6 +8,7 @@ import drawing6 from '../img/drawings/drawing6.jpg';
 import brandImg from '../img/drink/all.jpg';
 import wireframe1 from '../img/AR/Wireframe.jpg';
 import Mockup from '../img/Mood/Mockup1.jpg';
+import pants from '../img/FloridaMan/pants.jpg';
 
 const projects = [
     {
@@ -65,7 +66,15 @@ const projects = [
         link: '/Mood',
         category: 'UX/UI',
         internal: true,
-    }
+    },
+    {
+        title: 'Florida Man Project',
+        description: 'A graphic design series capturing Florida’s wild headlines through bold, band-inspired tour merch',
+        image: pants,
+        link: '/FloridaMan',
+        category: 'Graphic Design',
+        internal: true,
+    },
 ];
 
 const Projects = () => {

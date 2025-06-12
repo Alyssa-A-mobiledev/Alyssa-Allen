@@ -10,6 +10,7 @@ import DrawingGallery from './components/DrawingGallery';
 import Brand from './components/Brand';
 import APV from './components/APV';
 import Mood from './components/Mood';
+import FloridaMan from './components/FloridaMan';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/brand" element={<Brand />} />
           <Route path="/APV" element={<APV />} />
           <Route path="/Mood" element={<Mood />} />
+          <Route path="/floridaman" element={<FloridaMan />} />
         </Routes>
       </main>
       <Footer />
