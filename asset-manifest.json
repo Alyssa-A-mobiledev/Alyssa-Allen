@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/Alyssa-Allen/static/css/main.3f8212b8.css",
-    "main.js": "/Alyssa-Allen/static/js/main.32892c70.js",
+    "main.css": "/Alyssa-Allen/static/css/main.a2d8e204.css",
+    "main.js": "/Alyssa-Allen/static/js/main.0c441dc1.js",
     "static/js/488.7a0867f3.chunk.js": "/Alyssa-Allen/static/js/488.7a0867f3.chunk.js",
     "static/media/Video.mp4": "/Alyssa-Allen/static/media/Video.878a16ee775b96cb26c3.mp4",
+    "static/media/poster.jpg": "/Alyssa-Allen/static/media/poster.b41d32722b90dfb8f597.jpg",
     "static/media/my-image.jpg": "/Alyssa-Allen/static/media/my-image.03cc43f3c2349464f658.jpg",
     "static/media/film-strip.png": "/Alyssa-Allen/static/media/film-strip.b41f9abe58176080bd60.png",
+    "static/media/sketch.jpg": "/Alyssa-Allen/static/media/sketch.ff09aa53e8b075ed4003.jpg",
     "static/media/PBuilding1.jpg": "/Alyssa-Allen/static/media/PBuilding1.fb91cbf765b33d836e2e.jpg",
     "static/media/PBuilding2.jpg": "/Alyssa-Allen/static/media/PBuilding2.1d0e56025094d4ef09f5.jpg",
     "static/media/project4.jpg": "/Alyssa-Allen/static/media/project4.ce84bd126254d499b82b.jpg",
@@ -48,13 +50,16 @@
     "static/media/orange.jpg": "/Alyssa-Allen/static/media/orange.13b820228690c52d6f0f.jpg",
     "static/media/pink.jpg": "/Alyssa-Allen/static/media/pink.e29dae1e55b67383fb3c.jpg",
     "static/media/drawing17.jpg": "/Alyssa-Allen/static/media/drawing17.aad8d25cf982715475d9.jpg",
+    "static/media/pants.jpg": "/Alyssa-Allen/static/media/pants.3f8b0afdd83b926904a0.jpg",
     "static/media/Home.jpg": "/Alyssa-Allen/static/media/Home.0fc41f6feea8c4030e5a.jpg",
     "static/media/Feel.jpg": "/Alyssa-Allen/static/media/Feel.855591165fe25ca6c509.jpg",
     "static/media/Week.jpg": "/Alyssa-Allen/static/media/Week.f84e62c5bc2045021e9a.jpg",
     "static/media/drawing16.jpg": "/Alyssa-Allen/static/media/drawing16.856429934f631f2cbe14.jpg",
     "static/media/screen3.jpg": "/Alyssa-Allen/static/media/screen3.1610fc30d8037bb21f56.jpg",
     "static/media/Month.jpg": "/Alyssa-Allen/static/media/Month.2c88a61f311cc850d130.jpg",
+    "static/media/shirt1.jpg": "/Alyssa-Allen/static/media/shirt1.90b52c04be13aab46a8e.jpg",
     "static/media/Mad.jpg": "/Alyssa-Allen/static/media/Mad.03cef321f7a161e76f91.jpg",
+    "static/media/shirt2.jpg": "/Alyssa-Allen/static/media/shirt2.dffb2a0f4d603cedb48a.jpg",
     "static/media/contact-image.png": "/Alyssa-Allen/static/media/contact-image.4a436edc9256ced74ed5.png",
     "static/media/Neutral.jpg": "/Alyssa-Allen/static/media/Neutral.43e6edd387949dca77f0.jpg",
     "static/media/Sad.jpg": "/Alyssa-Allen/static/media/Sad.af7178ebf66de2a22a6d.jpg",
@@ -62,14 +67,15 @@
     "static/media/Happy.jpg": "/Alyssa-Allen/static/media/Happy.9c14173ebade49a96b4b.jpg",
     "static/media/Anxious.jpg": "/Alyssa-Allen/static/media/Anxious.80223253b90f7f2e99c9.jpg",
     "static/media/project1.jpg": "/Alyssa-Allen/static/media/project1.68480165f5dd5017da58.jpg",
+    "static/media/logo.jpg": "/Alyssa-Allen/static/media/logo.ae5066db2c49fdc639cc.jpg",
     "static/media/logo.png": "/Alyssa-Allen/static/media/logo.294ca52e337ec8cb6a5c.png",
     "index.html": "/Alyssa-Allen/index.html",
-    "main.3f8212b8.css.map": "/Alyssa-Allen/static/css/main.3f8212b8.css.map",
-    "main.32892c70.js.map": "/Alyssa-Allen/static/js/main.32892c70.js.map",
+    "main.a2d8e204.css.map": "/Alyssa-Allen/static/css/main.a2d8e204.css.map",
+    "main.0c441dc1.js.map": "/Alyssa-Allen/static/js/main.0c441dc1.js.map",
     "488.7a0867f3.chunk.js.map": "/Alyssa-Allen/static/js/488.7a0867f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f8212b8.css",
-    "static/js/main.32892c70.js"
+    "static/css/main.a2d8e204.css",
+    "static/js/main.0c441dc1.js"
   ]
 }
