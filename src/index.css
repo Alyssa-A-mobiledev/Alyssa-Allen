@@ -44,7 +44,7 @@ p {
 
 /* Navbar */
 .navbar {
-  background-color: #272D4E;
+  background-color: #6374d3;
   color: white;
   font-family: 'Playfair Display', serif, bold;
   padding: 1rem 2rem;
@@ -79,13 +79,13 @@ p {
 }
 
 .nav-links a:hover {
-  color: #A18EED;
+  color: #e7a3fb;
 }
 
 /* Footer */
 .footer-container {
-  background-color: #0C6A6F;
-  color: #095256;
+  background-color: #6374d3;
+  color: #8f02a5;
   padding: 0.5rem;
   text-align: center;
 }
@@ -998,7 +998,7 @@ h2 {
 
 /* FloridaMan Project CSS */
 
-.florida-project-container {
+.mood-project-container {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -1006,28 +1006,28 @@ h2 {
   color: #222;
 }
 
-.florida-header {
+.mood-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.florida-section {
+.mood-section {
   margin-bottom: 3rem;
 }
 
-.florida-process-container {
+.mood-process-container {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
-.florida-text {
+.mood-text {
   flex: 1;
   min-width: 300px;
 }
 
-.florida-image-carousel {
+.mood-image-carousel {
   flex: 1;
   min-width: 300px;
   display: flex;
@@ -1035,7 +1035,7 @@ h2 {
   align-items: center;
 }
 
-.florida-carousel-container {
+.mood-carousel-container {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 4 / 3;
@@ -1048,20 +1048,20 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.florida-carousel-image {
+.mood-carousel-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-.florida-thumbnails {
+.mood-thumbnails {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.florida-thumbnail {
+.mood-thumbnail {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -1071,15 +1071,32 @@ h2 {
   transition: opacity 0.3s;
 }
 
-.florida-thumbnail:hover,
-.florida-thumbnail.active {
+.mood-thumbnail:hover,
+.mood-thumbnail.active {
   opacity: 1;
   outline: 2px solid #333;
 }
 
-.florida-wireframes-section,
-.florida-mockup,
-.florida-all-screens {
+.florida-section {
+  margin-bottom: 3rem;
+}
+
+.flashing-paper-link {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.florida-flashing-image {
+  margin-top: -170px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mood-wireframes-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1087,9 +1104,7 @@ h2 {
   gap: 1rem;
 }
 
-.florida-wireframes-section img,
-.florida-mockup img,
-.florida-all-screens img {
+.mood-wireframes-section img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
@@ -1097,7 +1112,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .florida-process-container {
+  .mood-process-container {
     flex-direction: column;
   }
 }

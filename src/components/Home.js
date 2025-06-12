@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 // Image imports
@@ -11,6 +11,8 @@ import UserP1 from '../img/UserP1.jpg';
 import UserP2 from '../img/UserP2.jpg';
 import PBuilding1 from '../img/PBuilding1.jpg';
 import PBuilding2 from '../img/PBuilding2.jpg';
+import sketch from '../img/florida/sketch.jpg';
+import pants from '../img/florida/pants.jpg';
 
 const imageVariants = {
     initial: (i) => ({
@@ -38,16 +40,18 @@ const Home = () => {
     const inView = useInView(stackRef, { margin: '-100px' });
     const images = [project1, project2, project3, project4];
 
-    // State for full-size image overlay
     const [fullImage, setFullImage] = useState(null);
+    const handleImageClick = (img) => setFullImage(img);
+    const closeFullImage = () => setFullImage(null);
 
-    const handleImageClick = (img) => {
-        setFullImage(img);
-    };
-
-    const closeFullImage = () => {
-        setFullImage(null);
-    };
+    // ✅ State and effect for flashing between sketch and pants images
+    const [currentFloridaImage, setCurrentFloridaImage] = useState(sketch);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentFloridaImage((prev) => (prev === sketch ? pants : sketch));
+        }, 1500);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <section className="home-container">
@@ -67,7 +71,6 @@ const Home = () => {
 
             <div className="scrolling-bar">
                 <p className="scrolling-text">
-                    WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
                     WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
                     WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
                     WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
@@ -96,7 +99,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/*  User Personas Section */}
+            {/* User Personas Section */}
             <section className="user-persona-section">
                 <h2>User Personas & Persona Building</h2>
                 <p>In my process, I focus on building thoughtful, research-driven personas to guide design decisions. Below are examples of personas developed for UX projects, along with visual explorations of persona building.</p>

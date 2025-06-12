@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import shirt2 from '../img/FloridaMan/shirt2.jpg';
-import poster from '../img/FloridaMan/poster.jpg';
-import pants from '../img/FloridaMan/pants.jpg';
-import shirt1 from '../img/FloridaMan/shirt1.jpg';
-import sketch from '../img/FloridaMan/sketch.jpg';
-import logo from '../img/FloridaMan/logo.jpg';
+import shirt2 from '../img/florida/shirt2.jpg';
+import poster from '../img/florida/poster.jpg';
+import pants from '../img/florida/pants.jpg';
+import shirt1 from '../img/florida/shirt1.jpg';
+import sketch from '../img/florida/sketch.jpg';
+import logo from '../img/florida/logo.jpg';
 
-const floridaImages = [
-    shirt2,
-    poster,
-    pants,
-    shirt1,
-    sketch,
-    logo
-];
+const floridaImages = [poster, pants, sketch, logo, shirt1, shirt2];
+const flashingImages = [sketch, pants]; // <-- Added this, assuming you wanted to flash between these two
 
 const FloridaMan = () => {
     const [activeImage, setActiveImage] = useState(floridaImages[0]);
+    const [currentSketch, setCurrentSketch] = useState(sketch);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0); // <-- Added this for flashing images
 
     useEffect(() => {
         window.scrollTo(0, 0);
+    }, []);
+
+    // Flash between sketch and pants every 1.5s
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % flashingImages.length);
+        }, 1500);
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -31,14 +35,11 @@ const FloridaMan = () => {
             <div className="mood-section mood-process-container">
                 <div className="mood-text">
                     <h1>Project Overview</h1>
-
-                    <br />
                     <p>
-                        Brief: Create a captivating tour poster and a matching merchandise item for "Florida Man" that captures the essence of Florida's most eccentric stories, reflecting the style of iconic band tour posters.
-                    </p>
-                    <br></br>
-                    <p>
-                        The Florida Man project explores the playful and chaotic energy of Florida's meme-worthy persona through bold, graphic apparel and print designs. The project brings humor and cultural commentary together in a visually striking series.
+                        This project explores the playful and chaotic energy of Florida's meme-worthy persona through bold, graphic
+                        apparel and print designs. The Florida Man collection brings humor and cultural commentary together in a
+                        visually striking series, capturing the eccentric essence of the iconic "Florida Man" stories in the style
+                        of band tour posters.
                     </p>
                 </div>
 
@@ -60,10 +61,61 @@ const FloridaMan = () => {
                 </div>
             </div>
 
-            <div className="mood-wireframes-section">
-                <h1>Sketches & Logo</h1>
-                <img src={sketch} alt="Florida Man Sketch" />
-                <img src={logo} alt="Florida Man Logo" />
+            <div className="florida-section paper-and-reviews">
+                <div className="flashing-paper-link">
+                    <img
+                        src={flashingImages[currentImageIndex]}
+                        alt="Flashing Sketch"
+                        className="florida-flashing-image"
+                    />
+                </div>
+
+                <div className="mood-wireframes-section">
+                    <h1>Sketches & Logo</h1>
+
+                    {/* Shirt 1 & Shirt 2 side by side */}
+                    <div
+                        style={{
+                            display: 'flex',
+                            gap: '1.5rem',
+                            marginTop: '1rem',
+                            flexWrap: 'wrap',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <img
+                            src={shirt1}
+                            alt="Florida Man Shirt 1"
+                            style={{
+                                width: '350px',
+                                height: 'auto',
+                                borderRadius: '8px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                            }}
+                        />
+                        <img
+                            src={poster}
+                            alt="Florida Man Poster"
+                            style={{
+                                width: '350px',
+                                gap: '1rem',
+                                height: 'auto',
+                                borderRadius: '8px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                            }}
+                        />
+                        <img
+                            src={shirt2}
+                            alt="Florida Man Shirt 2"
+                            style={{
+                                width: '350px',
+                                height: 'auto',
+                                borderRadius: '8px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                            }}
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );
