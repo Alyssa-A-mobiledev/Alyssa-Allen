@@ -66,7 +66,7 @@ const Home = () => {
             </motion.div>
 
             <p>
-                Hi, I'm Alyssa — a digital media designer who loves mixing creativity with purpose. I'm a digital media creative with a strategic mindset and a passion for making user-centered ideas come to life. From content creation to UX design, I bring visual storytelling and thoughtful planning into every project I touch.
+                Hi, I'm Alyssa — a digital media designer who loves mixing creativity with purpose. I'm a digital media creator with a strategic mindset and a passion for making user-centered ideas come to life. From content creation to UX design, I bring visual storytelling and thoughtful planning into every project I touch.
             </p>
 
             <div className="scrolling-bar">
