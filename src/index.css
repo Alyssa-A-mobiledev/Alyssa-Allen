@@ -1,4 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
+@media (max-width: 768px) {
+
+  .top-section,
+  .image-stack-container,
+  .projects-grid,
+  .about-section {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Global Fixes for Mobile === */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section,
+div,
+header,
+footer {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+  .top-section,
+  .about-section,
+  .contact-page,
+  .hero-section,
+  .projects-grid,
+  .image-stack-container {
+    flex-direction: column !important;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form,
+  .contact-left {
+    width: 100%;
+  }
+
+  .home-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-header p {
+    font-size: 1.2rem;
+  }
+}
+
 
 body {
   overflow-x: hidden;
@@ -151,7 +219,7 @@ h2 {
 /* Scrolling Text Bar */
 .scrolling-bar {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   background-color: #2F347E;
   padding: 10px 0;
   position: relative;
@@ -384,7 +452,7 @@ h2 {
   font-family: 'Lakki Reddy', cursive;
   text-transform: uppercase;
   font-size: 3rem;
-  color: #095256;
+  color: #2F347E;
   margin-bottom: 1rem;
 }
 
