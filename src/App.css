@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  overflow-x: hidden;
-  /* Prevent horizontal scroll on small screens */
 }
 
 .App-logo {
@@ -15,44 +13,6 @@
   }
 }
 
-/* ✅ HERO SECTION: Responsive layout for desktop and mobile */
-.hero-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-/* ✅ Mobile-friendly layout for small screens */
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-}
-
-/* ✅ Ensure all images scale properly */
-img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-
-/* ✅ Font sizing for small screens */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-}
-
-/* ✅ Header stays centered and mobile-friendly */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -62,16 +22,12 @@ img {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
-/* ✅ Link styling */
 .App-link {
   color: #61dafb;
 }
 
-/* ✅ Animation keyframe (unchanged) */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -82,7 +38,6 @@ img {
   }
 }
 
-/* ✅ Fade-in animation used in sections */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
