@@ -14,27 +14,6 @@ import PBuilding2 from '../img/PBuilding2.jpg';
 import sketch from '../img/florida/sketch.jpg';
 import pants from '../img/florida/pants.jpg';
 
-const imageVariants = {
-    initial: (i) => ({
-        x: -i * 250,
-        y: -i * 0,
-        scale: 0.95 + i * 0.02,
-        zIndex: 10 - i,
-        position: 'absolute',
-    }),
-    stacked: {
-        x: 0,
-        y: 0,
-        scale: 1,
-        zIndex: 1,
-        position: 'relative',
-        transition: {
-            duration: 0.6,
-            ease: 'easeInOut',
-        },
-    },
-};
-
 const Home = () => {
     const stackRef = useRef(null);
     const inView = useInView(stackRef, { margin: '-100px' });
@@ -44,7 +23,37 @@ const Home = () => {
     const handleImageClick = (img) => setFullImage(img);
     const closeFullImage = () => setFullImage(null);
 
-    // ✅ State and effect for flashing between sketch and pants images
+    // 🔄 Resize logic for mobile detection
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // 💡 Image animation variants with mobile support
+    const imageVariants = {
+        initial: (i) => ({
+            x: isMobile ? 0 : -i * 250,
+            y: 0,
+            scale: 1,
+            zIndex: isMobile ? 1 : 10 - i,
+            position: isMobile ? 'relative' : 'absolute',
+        }),
+        stacked: {
+            x: 0,
+            y: 0,
+            scale: 1,
+            zIndex: 1,
+            position: 'relative',
+            transition: {
+                duration: 0.6,
+                ease: 'easeInOut',
+            },
+        },
+    };
+
+    // 🌀 Flashing between Florida images
     const [currentFloridaImage, setCurrentFloridaImage] = useState(sketch);
     useEffect(() => {
         const interval = setInterval(() => {
@@ -78,10 +87,13 @@ const Home = () => {
                 </p>
             </div>
 
-            {/* Featured Section */}
+            {/* 🎵 Featured Spotify Covers */}
             <section className="featured-section" ref={stackRef}>
                 <h2>Spotify Playlist Covers</h2>
-                <p>A dynamic visual showcase of Spotify playlist covers. Eye-catching and memorable Spotify playlist covers crafted to capture the essence of each playlist, making it visually appealing and enhancing the listener's experience. I tailor each piece to reflect the unique vibe of the playlist.</p>
+                <p>
+                    A dynamic visual showcase of Spotify playlist covers. Eye-catching and memorable Spotify playlist covers crafted to capture the essence of each playlist, making it visually appealing and enhancing the listener's experience. I tailor each piece to reflect the unique vibe of the playlist.
+                </p>
+
                 <div className="image-stack-container">
                     {images.map((src, index) => (
                         <div key={index} className="image-wrapper">
@@ -99,10 +111,12 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* User Personas Section */}
+            {/* 👥 User Personas */}
             <section className="user-persona-section">
                 <h2>User Personas & Persona Building</h2>
-                <p>In my process, I focus on building thoughtful, research-driven personas to guide design decisions. Below are examples of personas developed for UX projects, along with visual explorations of persona building.</p>
+                <p>
+                    In my process, I focus on building thoughtful, research-driven personas to guide design decisions. Below are examples of personas developed for UX projects, along with visual explorations of persona building.
+                </p>
                 <div className="user-personas-grid">
                     {[UserP1, UserP2, PBuilding1, PBuilding2].map((img, index) => (
                         <img
@@ -116,7 +130,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* ✅ Full Image Overlay */}
+            {/* 🖼️ Full Image Viewer */}
             {fullImage && (
                 <div className="full-image-overlay" onClick={closeFullImage}>
                     <img src={fullImage} alt="Full View" />
