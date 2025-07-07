@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Alyssa-Allen/static/css/main.cce48468.css",
+    "main.css": "/Alyssa-Allen/static/css/main.02250b5a.css",
     "main.js": "/Alyssa-Allen/static/js/main.cd59aafb.js",
     "static/js/488.7a0867f3.chunk.js": "/Alyssa-Allen/static/js/488.7a0867f3.chunk.js",
     "static/media/Video.mp4": "/Alyssa-Allen/static/media/Video.878a16ee775b96cb26c3.mp4",
@@ -70,12 +70,12 @@
     "static/media/logo.jpg": "/Alyssa-Allen/static/media/logo.ae5066db2c49fdc639cc.jpg",
     "static/media/logo.png": "/Alyssa-Allen/static/media/logo.294ca52e337ec8cb6a5c.png",
     "index.html": "/Alyssa-Allen/index.html",
-    "main.cce48468.css.map": "/Alyssa-Allen/static/css/main.cce48468.css.map",
+    "main.02250b5a.css.map": "/Alyssa-Allen/static/css/main.02250b5a.css.map",
     "main.cd59aafb.js.map": "/Alyssa-Allen/static/js/main.cd59aafb.js.map",
     "488.7a0867f3.chunk.js.map": "/Alyssa-Allen/static/js/488.7a0867f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cce48468.css",
+    "static/css/main.02250b5a.css",
     "static/js/main.cd59aafb.js"
   ]
 }
