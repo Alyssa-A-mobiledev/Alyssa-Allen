@@ -219,7 +219,7 @@ h2 {
 /* Scrolling Text Bar */
 .scrolling-bar {
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   background-color: #2F347E;
   padding: 10px 0;
   position: relative;
@@ -672,7 +672,7 @@ h2 {
 /* Scrolling logos (Label designs) */
 .scrolling-logos {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   margin: 2rem 0;
 }
 
