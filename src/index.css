@@ -37,20 +37,20 @@ footer {
     align-items: center;
     height: auto;
     overflow: visible;
+    position: static;
   }
 
   .image-wrapper {
-    width: 90% !important;
-    height: auto !important;
+    width: 100%;
+    max-width: 350px;
     position: relative !important;
   }
 
   .stacked-image {
-    position: relative !important;
     width: 100%;
     height: auto;
+    position: relative !important;
     z-index: auto !important;
-    object-fit: cover;
   }
 }
 

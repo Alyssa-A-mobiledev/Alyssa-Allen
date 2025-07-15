@@ -23,7 +23,6 @@ const Home = () => {
     const handleImageClick = (img) => setFullImage(img);
     const closeFullImage = () => setFullImage(null);
 
-    // 🔄 Resize logic for mobile detection
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -31,12 +30,12 @@ const Home = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // 💡 Image animation variants with mobile support
+    // Only use animation on desktop
     const imageVariants = {
         initial: (i) => ({
             x: isMobile ? 0 : -i * 250,
-            y: 0,
-            scale: 1,
+            y: isMobile ? 0 : i * 30,
+            scale: isMobile ? 1 : 0.95 + i * 0.02,
             zIndex: isMobile ? 1 : 10 - i,
             position: isMobile ? 'relative' : 'absolute',
         }),
@@ -53,7 +52,6 @@ const Home = () => {
         },
     };
 
-    // 🌀 Flashing between Florida images
     const [currentFloridaImage, setCurrentFloridaImage] = useState(sketch);
     useEffect(() => {
         const interval = setInterval(() => {
@@ -82,19 +80,17 @@ const Home = () => {
                 <p className="scrolling-text">
                     WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
                     WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
-                    WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
-                    WELCOME! TAKE A PEEK INTO MY WORLD OF DIGITAL DESIGN AND CREATIVITY ✦ &nbsp;&nbsp;
                 </p>
             </div>
 
-            {/* 🎵 Featured Spotify Covers */}
+            {/* 🎵 Spotify Playlist Covers */}
             <section className="featured-section" ref={stackRef}>
                 <h2>Spotify Playlist Covers</h2>
                 <p>
                     A dynamic visual showcase of Spotify playlist covers. Eye-catching and memorable Spotify playlist covers crafted to capture the essence of each playlist, making it visually appealing and enhancing the listener's experience. I tailor each piece to reflect the unique vibe of the playlist.
                 </p>
 
-                <div className="image-stack-container">
+                <div className={`image-stack-container ${isMobile ? 'mobile-layout' : ''}`}>
                     {images.map((src, index) => (
                         <div key={index} className="image-wrapper">
                             <motion.img
@@ -130,7 +126,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* 🖼️ Full Image Viewer */}
             {fullImage && (
                 <div className="full-image-overlay" onClick={closeFullImage}>
                     <img src={fullImage} alt="Full View" />
