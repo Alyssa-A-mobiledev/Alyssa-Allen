@@ -1,98 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
-@media (max-width: 768px) {
-
-  .top-section,
-  .image-stack-container,
-  .projects-grid,
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* === Global Fixes for Mobile === */
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-section,
-div,
-header,
-footer {
-  box-sizing: border-box;
-}
 
 /*Start of my CSS*/
-body {
-  overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-
-  .top-section,
-  .about-section,
-  .contact-page,
-  .hero-section,
-  .projects-grid,
-  .image-stack-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form,
-  .contact-left {
-    width: 100%;
-  }
-
-  .home-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .home-header p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .image-stack-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    /* ✅ fix stacking height */
-    overflow: visible;
-    padding: 1rem;
-  }
-
-  .image-wrapper {
-    width: 90%;
-    height: auto;
-  }
-
-  .stacked-image {
-    height: auto;
-    width: 100%;
-    object-fit: contain;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    /* optional: softer for mobile */
-  }
-}
-
-
 body {
   overflow-x: hidden;
 }
@@ -278,33 +186,27 @@ h2 {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: visible;
+  height: 320px;
 }
 
-@media (max-width: 768px) {
-  .image-stack-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .image-wrapper {
-    width: 90%;
-    height: auto;
-    position: relative;
-  }
-
-  .stacked-image {
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: auto;
-  }
+.image-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
 }
+
+.stacked-image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 
 /* About */
@@ -483,7 +385,7 @@ h2 {
   font-family: 'Lakki Reddy', cursive;
   text-transform: uppercase;
   font-size: 3rem;
-  color: #2F347E;
+  color: #095256;
   margin-bottom: 1rem;
 }
 
@@ -847,7 +749,7 @@ h2 {
 }
 
 .ar-header h1 {
-  font-weight: bold;
+  text-type: bold;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
