@@ -1119,3 +1119,54 @@ h2 {
     flex-direction: column;
   }
 }
+
+/* Global Mobile CSS */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section,
+div,
+header,
+footer {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+  .top-section,
+  .about-section,
+  .contact-page,
+  .hero-section,
+  .projects-grid,
+  .image-stack-container {
+    flex-direction: column !important;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form,
+  .contact-left {
+    width: 100%;
+  }
+
+  .home-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-header p {
+    font-size: 1.2rem;
+  }
+}
