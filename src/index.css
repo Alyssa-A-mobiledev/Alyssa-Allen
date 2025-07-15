@@ -1175,22 +1175,20 @@ body {
   .image-stack-container {
     flex-direction: column;
     align-items: center;
-    height: auto !important;
-    /* ✅ fix stacking height */
-    overflow: visible;
-    padding: 1rem;
+    height: auto;
   }
 
   .image-wrapper {
     width: 90% !important;
     height: auto !important;
+    position: relative !important;
   }
 
   .stacked-image {
-    height: auto;
+    position: relative !important;
     width: 100%;
-    object-fit: contain;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    /* optional: softer for mobile */
+    height: auto;
+    object-fit: cover;
+    z-index: auto !important;
   }
 }
