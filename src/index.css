@@ -5,7 +5,7 @@
   .image-stack-container,
   .projects-grid,
   .about-section {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 1rem;
@@ -31,16 +31,6 @@ footer {
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  .image-stack-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    overflow: visible;
-    position: static;
-  }
-}
-
 /*Start of my CSS*/
 body {
   overflow-x: hidden;
@@ -54,14 +44,14 @@ body {
   .hero-section,
   .projects-grid,
   .image-stack-container {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
     padding: 1rem;
     text-align: center;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .contact-form,
@@ -82,15 +72,15 @@ body {
   .image-stack-container {
     flex-direction: column;
     align-items: center;
-    height: auto !important;
+    height: auto;
     /* ✅ fix stacking height */
     overflow: visible;
     padding: 1rem;
   }
 
   .image-wrapper {
-    width: 90% !important;
-    height: auto !important;
+    width: 90%;
+    height: auto;
   }
 
   .stacked-image {
@@ -302,17 +292,17 @@ h2 {
   }
 
   .image-wrapper {
-    width: 90% !important;
-    height: auto !important;
-    position: relative !important;
+    width: 90%;
+    height: auto;
+    position: relative;
   }
 
   .stacked-image {
-    position: relative !important;
+    position: relative;
     width: 100%;
     height: auto;
     object-fit: cover;
-    z-index: auto !important;
+    z-index: auto;
   }
 }
 
