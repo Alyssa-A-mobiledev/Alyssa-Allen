@@ -39,19 +39,6 @@ footer {
     overflow: visible;
     position: static;
   }
-
-  .image-wrapper {
-    width: 100%;
-    max-width: 350px;
-    position: relative !important;
-  }
-
-  .stacked-image {
-    width: 100%;
-    height: auto;
-    position: relative !important;
-    z-index: auto !important;
-  }
 }
 
 /*Start of my CSS*/
